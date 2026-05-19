@@ -67,6 +67,7 @@ def main():
             continue
         if user.lower() in ("/cls", "/clear"):
             os.system('cls' if os.name == 'nt' else 'clear')
+            continue
         if not user:
             continue
 
