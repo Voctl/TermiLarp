@@ -1,31 +1,79 @@
 import json
 import sys
+import requests
 
-def chat(prompt: str, personality: str) -> str:
-    return "This is your answer"
+def load_config(path):
+    with open(path, "r") as f:
+        return json.load(f)
 
-def load_character(character_path: str):
-    with open(character_path, "r", encoding="utf-8") as f:
-        character = json.load(f)
-    return character
+def load_character(path):
+    with open(path, "r") as f:
+        return json.load(f)
+
+def load_history(path):
+    try:
+        with open(path, "r") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return []
+
+def save_history(path, messages):
+    with open(path, "w") as f:
+        json.dump(messages, f, indent=2)
+
+def chat(prompt, history, config, character):
+    system_prompt = character.get("personality", "cheerful anime girl who calls the user 'senpai'")
+    messages = [{"role": "system", "content": system_prompt}]
+    messages.extend(history)
+    messages.append({"role": "user", "content": prompt})
+
+    url = config["base_url"]
+    headers = {"Content-Type": "application/json"}
+    if "api_key" in config:
+        headers["Authorization"] = f"Bearer {config['api_key']}"
+
+    payload = {
+        "model": config["model"],
+        "messages": messages,
+        "max_tokens": config.get("max_tokens", 1024),
+        "temperature": config.get("temperature", 0.7)
+    }
+
+    resp = requests.post(url, json=payload, headers=headers, timeout=30)
+    resp.raise_for_status()
+    return resp.json()["choices"][0]["message"]["content"]
 
 def main():
+    config_path = sys.argv[1] if len(sys.argv) > 1 else "config.json"
+    character_path = sys.argv[2] if len(sys.argv) > 2 else "character.json"
 
-    character_path = sys.argv[1]
+    config = load_config(config_path)
     character = load_character(character_path)
+    name = character.get("name", "Bot")
 
-    character_name = character["name"]
-    character_personality = character["personality"]
+    hist_path = f"{character_path.split('/')[-1].replace('.json','')}_history.json"
+    history = load_history(hist_path)
 
     while True:
-        prompt = input("You: ")
+        try:
+            user = input("You: ").strip()
+        except (EOFError, KeyboardInterrupt):
+            break
+        if user.lower() in ("quit", "exit", "leave"):
+            break
+        if not user:
+            continue
 
-        if prompt in ["exit", "quit", "leave"]:
-            return
+        try:
+            reply = chat(user, history, config, character)
+        except Exception as e:
+            print(f"Error: {e}")
+            continue
 
-        answer = chat(prompt, character_personality)
-
-        print(f"{character_name}: {answer}")
+        history.append({"role": "user", "content": user})
+        history.append({"role": "assistant", "content": reply})
+        save_history(hist_path, history)
+        print(f"{name}: {reply}")
 
 if __name__ == "__main__":
     main()
