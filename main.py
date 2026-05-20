@@ -55,6 +55,12 @@ def main():
     hist_path = f"{character_path.split('/')[-1].replace('.json','')}_history.json"
     history = load_history(hist_path)
 
+    for message in history:
+        if message.get("role") == "user":
+            print(f"You: {message.get('content')}")
+        elif message.get("role") == "assistant":
+            print(f"{name}: {message.get('content')}")
+
     while True:
         try:
             user = input("You: ").strip()
@@ -64,6 +70,7 @@ def main():
             break
         if user.lower() in ("/flush", "/forget"):
             os.remove(hist_path)
+            history = []
             continue
         if user.lower() in ("/cls", "/clear"):
             os.system('cls' if os.name == 'nt' else 'clear')
