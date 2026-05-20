@@ -57,13 +57,13 @@ def main():
 
     for message in history:
         if message.get("role") == "user":
-            print(f"You: {message.get('content')}")
+            print(f"\nYou: {message.get('content')}")
         elif message.get("role") == "assistant":
-            print(f"{name}: {message.get('content')}")
+            print(f"\n{name}: {message.get('content')}")
 
     while True:
         try:
-            user = input("You: ").strip()
+            user = input("\nYou: ").strip()
         except (EOFError, KeyboardInterrupt):
             break
         if user.lower() in ("/quit", "/exit", "/leave"):
@@ -81,13 +81,13 @@ def main():
         try:
             reply = chat(user, history, config, character)
         except Exception as e:
-            print(f"Error: {e}")
+            print(f"\nError: {e}")
             continue
 
         history.append({"role": "user", "content": user})
         history.append({"role": "assistant", "content": reply})
         save_history(hist_path, history)
-        print(f"{name}: {reply}")
+        print(f"\n{name}: {reply}")
 
 if __name__ == "__main__":
     main()
