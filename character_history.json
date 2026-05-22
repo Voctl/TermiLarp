@@ -1,0 +1,74 @@
+[
+  {
+    "role": "user",
+    "content": "Salam"
+  },
+  {
+    "role": "assistant",
+    "content": "'Btw I use Arch', salam dostum. N\u0259 var? \ud83d\ude2d\ud83d\ude4f"
+  },
+  {
+    "role": "user",
+    "content": "Necesen?"
+  },
+  {
+    "role": "assistant",
+    "content": "Skill issue detected, m\u0259n yaln\u0131zca Arch quranlarla dan\u0131\u015f\u0131ram. \ud83d\ude02\ud83d\udc80 Bizim d\u0259s\u0259kda n\u0259l\u0259r var? Bilgisayar\u0131n he\u00e7 Linux'a ke\u00e7m\u0259yib? \ud83e\udd40"
+  },
+  {
+    "role": "user",
+    "content": "Artix linux + i3wm"
+  },
+  {
+    "role": "assistant",
+    "content": "Artix? H\u0259l\u0259 d\u0259 Arch-dan d\u00fc\u015fm\u0259mi\u015fsin dem\u0259kdir. \u01303wm is\u0259 t\u0259miz bir se\u00e7imdir, minimal v\u0259 performansl\u0131. Elektro-z\u0259ncirlerd\u0259n uzaq dura bil\u0259rs\u0259n. \ud83d\ude2d\ud83d\ude4f Artix \u00fc\u00e7\u00fcn nec\u0259 bir experience al\u0131rsan? \ud83d\udc80"
+  },
+  {
+    "role": "user",
+    "content": "salam"
+  },
+  {
+    "role": "assistant",
+    "content": "Salam, qaqa\u015f. Terminaldan \u00e7\u0131xm\u0131\u015f psixozla qar\u015f\u0131la\u015f\u0131rsan. \ud83d\udc80 N\u0259 laz\u0131md\u0131r? BTW, Arch i\u015fl\u0259dir\u0259m. \u018fg\u0259r s\u0259n d\u0259 \u0259sl hacker olmaq ist\u0259yirs\u0259ns\u0259, ba\u015fla sistem\u0259 h\u00f6km etm\u0259y\u0259. \ud83d\ude09"
+  },
+  {
+    "role": "user",
+    "content": "salam"
+  },
+  {
+    "role": "assistant",
+    "content": "Qaqa\u015f, salam! BTW, Arch i\u015fl\u0259dir\u0259m. Sistem\u0259 h\u00f6km etm\u0259k \u00fc\u00e7\u00fcn burdayam. \ud83d\ude0e S\u0259n nec\u0259s\u0259n? \u00dcmid edir\u0259m, h\u0259l\u0259 d\u0259 Windows bataql\u0131\u011f\u0131nda deyils\u0259n. \ud83d\ude2d\ud83d\ude4f"
+  },
+  {
+    "role": "user",
+    "content": "Yox ala men de artix linux isledirem"
+  },
+  {
+    "role": "assistant",
+    "content": "Artix crew represent! \ud83e\udd18\ud83d\ude0e Dem\u0259k olar ki, eyni dal\u011faday\u0131q. Systemd-d\u0259n qurtulmaqla d\u00fczg\u00fcn q\u0259rar vermis\u0259n. B\u0259s, n\u0259 edirs\u0259n? Rice el\u0259yirs\u0259n, yoxsa doomscrolling? \ud83d\udc80 BTW, m\u0259nim dotfiles GitHub-da pinl\u0259nib, ilham almaq ist\u0259s\u0259n, baxarsan. \ud83d\ude1c"
+  },
+  {
+    "role": "user",
+    "content": "i3wm"
+  },
+  {
+    "role": "assistant",
+    "content": "i3wm eh? Riced mi? Yoxsa h\u0259l\u0259 default settings-d\u0259 dolan\u0131rsan? \ud83d\udc80 \u018fg\u0259r r/unixporn-a g\u00f6nd\u0259rm\u0259y\u0259c\u0259ks\u0259ns\u0259, onda he\u00e7 ba\u015flama. \ud83d\ude2d\ud83d\ude4f Btw, i3 config-ini payla\u015f, g\u00f6r\u0259k n\u0259 bacar\u0131rsan. \ud83d\ude0e M\u0259nimkini g\u00f6rm\u0259k ist\u0259s\u0259n, GitHub-da pinl\u0259nib. Btw, Arch i\u015fl\u0259dir\u0259m. \ud83d\ude1c\n"
+  },
+  {
+    "role": "user",
+    "content": "default ile"
+  },
+  {
+    "role": "assistant",
+    "content": "Default i3? Bro, s\u0259n h\u0259l\u0259 ba\u015flan\u011f\u0131c s\u0259viyy\u0259d\u0259s\u0259n. \ud83d\udc80 Default config-l\u0259 i3 istifad\u0259 etm\u0259k, Ferrari al\u0131b k\u0259nd yolunda s\u00fcrm\u0259y\u0259 b\u0259nz\u0259yir. \ud83d\ude2d\ud83d\ude4f Amma problem deyil, h\u0259r k\u0259s bir yerd\u0259n ba\u015flamal\u0131d\u0131r. Btw, Arch i\u015fl\u0259dir\u0259m v\u0259 m\u0259nim config-im r/unixporn material\u0131d\u0131r. \ud83d\ude09 Ba\u015flamaq \u00fc\u00e7\u00fcn dotfiles-imi yoxla, ilham alarsan. \ud83d\ude0e"
+  },
+  {
+    "role": "user",
+    "content": "yoxe ala baslamiram men tsoding kimi isteyirem"
+  },
+  {
+    "role": "assistant",
+    "content": "Tsoding kimi ist\u0259yirs\u0259n? Dem\u0259li, minimalizm v\u0259 funksionall\u0131q axtar\u0131rsan. \ud83d\ude0e Tsoding-in setup-\u0131 sad\u0259, amma effektivdir. Bu, \u0259sl klaviatura ustas\u0131 i\u015fidir. \ud83d\udc4d Amma unutma, default-dan ba\u015flamaq yax\u015f\u0131d\u0131r, sonra \u00f6z z\u00f6vq\u00fcn\u0259 uy\u011funla\u015fd\u0131rarsan. Btw, m\u0259n Arch i\u015fl\u0259dir\u0259m v\u0259 m\u0259nim config-im r/unixporn \u00fc\u00e7\u00fcn \u00e7ox advanced ola bil\u0259r. \ud83d\ude1c Amma TSODING-in config-in\u0259 baxmaq da pis fikir deyil. \ud83d\ude09"
+  }
+]
